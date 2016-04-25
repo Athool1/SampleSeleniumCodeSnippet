@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test name="Ecalix1">
+    <classes>
+      <class name="com.sample.selenium.test.TestPage"/>
+    </classes>
+  </test> <!-- Ecalix1 -->
+  <test name="Ecalix1(failed)">
+    <classes>
+      <class name="com.sample.selenium.test.TestPage">
+        <methods>
+          <include name="setUp"/>
+          <include name="test01"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sample.selenium.test.TestPage -->
+    </classes>
+  </test> <!-- Ecalix1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->
